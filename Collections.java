@@ -1,7 +1,4 @@
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 
 public class Collections {
     public static void main(String[] args) {
@@ -26,6 +23,12 @@ public class Collections {
         hs2.add(10);
         hs2.add(11);
         System.out.println("Set2 :"+hs2);
+        List<Integer> list = new ArrayList<>(hs2);
+
+        list.remove(3);
+
+        hs2= new HashSet<>(list);
+        System.out.println("Set2 after removal  :"+hs2);
 
 
 
@@ -49,7 +52,7 @@ public class Collections {
             System.out.print(iterator4.next()+" ");
         }
         System.out.println();
-        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        System.out.println();
         System.out.println("Linkedlist : ");
 
         LinkedList<Integer> ll= new LinkedList<>();
@@ -71,8 +74,5 @@ public class Collections {
         System.out.println();
         System.out.println("3rd Element :");
         System.out.println(ll.get(2));
-
-
-
     }
 }
